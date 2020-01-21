@@ -1,0 +1,21 @@
+{
+  "name": "lottery",
+  "version": "1.0.0",
+  "main": "compile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.0.29",
+    "bip39": "^3.0.2",
+    "solc": "^0.6.1",
+    "truffle": "^5.1.9",
+    "web3": "^1.2.5-rc.0"
+  }
+}

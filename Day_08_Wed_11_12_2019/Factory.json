@@ -1,0 +1,771 @@
+{
+  "contractName": "Factory",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "deployedCampaigns",
+      "outputs": [
+        {
+          "internalType": "contract KickstartCampaign",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "minimum",
+          "type": "uint256"
+        }
+      ],
+      "name": "createCampaign",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"minimum\",\"type\":\"uint256\"}],\"name\":\"createCampaign\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"deployedCampaigns\",\"outputs\":[{\"internalType\":\"contract KickstartCampaign\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/user/Desktop/BC1_Ruud/Day_08_Wed_11_12_2019/contracts/Factory.sol\":\"Factory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/user/Desktop/BC1_Ruud/Day_08_Wed_11_12_2019/contracts/Factory.sol\":{\"keccak256\":\"0x2e40d1ea787d8d1285393303331e71c77159d6900db1465210c5b7f7aba35b69\",\"urls\":[\"bzz-raw://e9d93eeaafc57feafc029eb4b1c8592c237aea7d5b665d2b2cd5b29ef290aaf0\",\"dweb:/ipfs/QmPjLKXvnwp2J3Jxj6SJTD1WfeKQ1UD4b94N8UxHD2hT5p\"]},\"/C/Users/user/Desktop/BC1_Ruud/Day_08_Wed_11_12_2019/contracts/KickstartCampaign.sol\":{\"keccak256\":\"0x76fc02ebb64e48fb62a0a440db311967d65861e18aeed6e55521db55dba59cd8\",\"urls\":[\"bzz-raw://0cedf858b1e3cd4b0b86e42b882458b39ec6b8d362533c732c9dc2e18fb855b5\",\"dweb:/ipfs/QmNM51CaQqk84XK9GptpH9mXKKbYK6P43AYV4qPtLaHqFj\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610af3806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063339d50a51461003b578063a3303a7514610074575b600080fd5b6100586004803603602081101561005157600080fd5b5035610093565b604080516001600160a01b039092168252519081900360200190f35b6100916004803603602081101561008a57600080fd5b50356100ba565b005b600081815481106100a057fe5b6000918252602090912001546001600160a01b0316905081565b600081336040516100ca9061014c565b9182526001600160a01b03166020820152604080519182900301906000f0801580156100fa573d6000803e3d6000fd5b50600080546001810182559080527f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e5630180546001600160a01b0319166001600160a01b03929092169190911790555050565b6109658061015a8339019056fe608060405234801561001057600080fd5b506040516109653803806109658339818101604052604081101561003357600080fd5b508051602090910151600180546001600160a01b0319166001600160a01b039092169190911790556002556108f88061006d6000396000f3fe6080604052600436106100865760003560e01c80638a9cfd55116100595780638a9cfd5514610203578063937e09b1146102c4578063d7bb99ba146102eb578063d7d1bbdb146102f3578063e9f146a31461031d57610086565b8063034410061461008b5780630a144391146100b7578063481c6a75146100fe57806381d12c581461012f575b600080fd5b34801561009757600080fd5b506100b5600480360360208110156100ae57600080fd5b5035610332565b005b3480156100c357600080fd5b506100ea600480360360208110156100da57600080fd5b50356001600160a01b031661049b565b604080519115158252519081900360200190f35b34801561010a57600080fd5b506101136104b0565b604080516001600160a01b039092168252519081900360200190f35b34801561013b57600080fd5b506101596004803603602081101561015257600080fd5b50356104bf565b6040518080602001868152602001856001600160a01b03166001600160a01b0316815260200184151515158152602001838152602001828103825287818151815260200191508051906020019080838360005b838110156101c45781810151838201526020016101ac565b50505050905090810190601f1680156101f15780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b34801561020f57600080fd5b506100b56004803603606081101561022657600080fd5b81019060208101813564010000000081111561024157600080fd5b82018360208201111561025357600080fd5b8035906020019184600183028401116401000000008311171561027557600080fd5b91908080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525092955050823593505050602001356001600160a01b0316610598565b3480156102d057600080fd5b506102d96106bd565b60408051918252519081900360200190f35b6100b56106c3565b3480156102ff57600080fd5b506100b56004803603602081101561031657600080fd5b503561071b565b34801561032957600080fd5b506102d96107e8565b6001546001600160a01b0316331461036b576040805162461bcd60e51b8152602060048201526000602482015290519081900360640190fd5b600080828154811061037957fe5b906000526020600020906005020190506000828154811061039657fe5b906000526020600020906005020160020160149054906101000a900460ff16156103e1576040805162461bcd60e51b8152602060048201526000602482015290519081900360640190fd5b6002600454816103ed57fe5b0481600301541161041f576040805162461bcd60e51b8152602060048201526000602482015290519081900360640190fd5b600281015460018201546040516001600160a01b039092169181156108fc0291906000818181858888f1935050505015801561045f573d6000803e3d6000fd5b5060016000838154811061046f57fe5b906000526020600020906005020160020160146101000a81548160ff0219169083151502179055505050565b60036020526000908152604090205460ff1681565b6001546001600160a01b031681565b600081815481106104cc57fe5b60009182526020918290206005919091020180546040805160026001841615610100026000190190931692909204601f8101859004850283018501909152808252919350918391908301828280156105655780601f1061053a57610100808354040283529160200191610565565b820191906000526020600020905b81548152906001019060200180831161054857829003601f168201915b5050505060018301546002840154600390940154929390926001600160a01b0382169250600160a01b90910460ff169085565b6001546001600160a01b031633146105d1576040805162461bcd60e51b8152602060048201526000602482015290519081900360640190fd5b6105d96107ee565b506040805160a08101825284815260208082018590526001600160a01b03841692820192909252600060608201819052608082018190528054600181018083559180528251805193949293859360059093027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e563019261065c928492910190610828565b5060208201516001820155604082015160028201805460608501511515600160a01b0260ff60a01b196001600160a01b039094166001600160a01b031990921691909117929092169190911790556080909101516003909101555050505050565b60025481565b60025434116106f3576040805162461bcd60e51b8152602060048201526000602482015290519081900360640190fd5b336000908152600360205260409020805460ff19166001908117909155600480549091019055565b600080828154811061072957fe5b6000918252602080832033845260039091526040909220546005909102909101915060ff16610779576040805162461bcd60e51b8152602060048201526000602482015290519081900360640190fd5b33600090815260048201602052604090205460ff16156107ba576040805162461bcd60e51b8152602060048201526000602482015290519081900360640190fd5b3360009081526004820160205260409020805460ff1916600190811790915560039091018054909101905550565b60045481565b6040518060a00160405280606081526020016000815260200160006001600160a01b03168152602001600015158152602001600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061086957805160ff1916838001178555610896565b82800160010185558215610896579182015b8281111561089657825182559160200191906001019061087b565b506108a29291506108a6565b5090565b6108c091905b808211156108a257600081556001016108ac565b9056fea265627a7a723158202829f6076f2362fae386caae7a5e0b6e7bfcc433675da96320c8dcae4c94295c64736f6c63430005100032a265627a7a72315820f7f481c91bbcce8f1cebf838adf461485640ccede330aadaf107edc9fe21d04a64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063339d50a51461003b578063a3303a7514610074575b600080fd5b6100586004803603602081101561005157600080fd5b5035610093565b604080516001600160a01b039092168252519081900360200190f35b6100916004803603602081101561008a57600080fd5b50356100ba565b005b600081815481106100a057fe5b6000918252602090912001546001600160a01b0316905081565b600081336040516100ca9061014c565b9182526001600160a01b03166020820152604080519182900301906000f0801580156100fa573d6000803e3d6000fd5b50600080546001810182559080527f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e5630180546001600160a01b0319166001600160a01b03929092169190911790555050565b6109658061015a8339019056fe608060405234801561001057600080fd5b506040516109653803806109658339818101604052604081101561003357600080fd5b508051602090910151600180546001600160a01b0319166001600160a01b039092169190911790556002556108f88061006d6000396000f3fe6080604052600436106100865760003560e01c80638a9cfd55116100595780638a9cfd5514610203578063937e09b1146102c4578063d7bb99ba146102eb578063d7d1bbdb146102f3578063e9f146a31461031d57610086565b8063034410061461008b5780630a144391146100b7578063481c6a75146100fe57806381d12c581461012f575b600080fd5b34801561009757600080fd5b506100b5600480360360208110156100ae57600080fd5b5035610332565b005b3480156100c357600080fd5b506100ea600480360360208110156100da57600080fd5b50356001600160a01b031661049b565b604080519115158252519081900360200190f35b34801561010a57600080fd5b506101136104b0565b604080516001600160a01b039092168252519081900360200190f35b34801561013b57600080fd5b506101596004803603602081101561015257600080fd5b50356104bf565b6040518080602001868152602001856001600160a01b03166001600160a01b0316815260200184151515158152602001838152602001828103825287818151815260200191508051906020019080838360005b838110156101c45781810151838201526020016101ac565b50505050905090810190601f1680156101f15780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b34801561020f57600080fd5b506100b56004803603606081101561022657600080fd5b81019060208101813564010000000081111561024157600080fd5b82018360208201111561025357600080fd5b8035906020019184600183028401116401000000008311171561027557600080fd5b91908080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525092955050823593505050602001356001600160a01b0316610598565b3480156102d057600080fd5b506102d96106bd565b60408051918252519081900360200190f35b6100b56106c3565b3480156102ff57600080fd5b506100b56004803603602081101561031657600080fd5b503561071b565b34801561032957600080fd5b506102d96107e8565b6001546001600160a01b0316331461036b576040805162461bcd60e51b8152602060048201526000602482015290519081900360640190fd5b600080828154811061037957fe5b906000526020600020906005020190506000828154811061039657fe5b906000526020600020906005020160020160149054906101000a900460ff16156103e1576040805162461bcd60e51b8152602060048201526000602482015290519081900360640190fd5b6002600454816103ed57fe5b0481600301541161041f576040805162461bcd60e51b8152602060048201526000602482015290519081900360640190fd5b600281015460018201546040516001600160a01b039092169181156108fc0291906000818181858888f1935050505015801561045f573d6000803e3d6000fd5b5060016000838154811061046f57fe5b906000526020600020906005020160020160146101000a81548160ff0219169083151502179055505050565b60036020526000908152604090205460ff1681565b6001546001600160a01b031681565b600081815481106104cc57fe5b60009182526020918290206005919091020180546040805160026001841615610100026000190190931692909204601f8101859004850283018501909152808252919350918391908301828280156105655780601f1061053a57610100808354040283529160200191610565565b820191906000526020600020905b81548152906001019060200180831161054857829003601f168201915b5050505060018301546002840154600390940154929390926001600160a01b0382169250600160a01b90910460ff169085565b6001546001600160a01b031633146105d1576040805162461bcd60e51b8152602060048201526000602482015290519081900360640190fd5b6105d96107ee565b506040805160a08101825284815260208082018590526001600160a01b03841692820192909252600060608201819052608082018190528054600181018083559180528251805193949293859360059093027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e563019261065c928492910190610828565b5060208201516001820155604082015160028201805460608501511515600160a01b0260ff60a01b196001600160a01b039094166001600160a01b031990921691909117929092169190911790556080909101516003909101555050505050565b60025481565b60025434116106f3576040805162461bcd60e51b8152602060048201526000602482015290519081900360640190fd5b336000908152600360205260409020805460ff19166001908117909155600480549091019055565b600080828154811061072957fe5b6000918252602080832033845260039091526040909220546005909102909101915060ff16610779576040805162461bcd60e51b8152602060048201526000602482015290519081900360640190fd5b33600090815260048201602052604090205460ff16156107ba576040805162461bcd60e51b8152602060048201526000602482015290519081900360640190fd5b3360009081526004820160205260409020805460ff1916600190811790915560039091018054909101905550565b60045481565b6040518060a00160405280606081526020016000815260200160006001600160a01b03168152602001600015158152602001600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061086957805160ff1916838001178555610896565b82800160010185558215610896579182015b8281111561089657825182559160200191906001019061087b565b506108a29291506108a6565b5090565b6108c091905b808211156108a257600081556001016108ac565b9056fea265627a7a723158202829f6076f2362fae386caae7a5e0b6e7bfcc433675da96320c8dcae4c94295c64736f6c63430005100032a265627a7a72315820f7f481c91bbcce8f1cebf838adf461485640ccede330aadaf107edc9fe21d04a64736f6c63430005100032",
+  "sourceMap": "61:243:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;61:243:0;;;;;;;",
+  "deployedSourceMap": "61:243:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;61:243:0;;;;;;;;;;;;;;;;;;;;;;;;82:44;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;82:44:0;;:::i;:::-;;;;-1:-1:-1;;;;;82:44:0;;;;;;;;;;;;;;130:172;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;130:172:0;;:::i;:::-;;82:44;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;82:44:0;;-1:-1:-1;82:44:0;:::o;130:172::-;182:29;236:7;245:10;214:42;;;;;:::i;:::-;;;;-1:-1:-1;;;;;214:42:0;;;;;;;;;;;;;;-1:-1:-1;214:42:0;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;262:17:0;27:10:-1;;39:1;23:18;;45:23;;262:35:0;;;;;;;-1:-1:-1;;;;;;262:35:0;-1:-1:-1;;;;;262:35:0;;;;;;;;;;-1:-1:-1;;130:172:0:o;61:243::-;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.16;\n\nimport './KickstartCampaign.sol';\n\ncontract Factory {\n  KickstartCampaign[] public deployedCampaigns;\n  function createCampaign(uint minimum) public {\n\n    KickstartCampaign newCampaign = new KickstartCampaign(minimum, msg.sender);\n    deployedCampaigns.push(newCampaign);\n  }\n}\n\n",
+  "sourcePath": "C:/Users/user/Desktop/BC1_Ruud/Day_08_Wed_11_12_2019/contracts/Factory.sol",
+  "ast": {
+    "absolutePath": "/C/Users/user/Desktop/BC1_Ruud/Day_08_Wed_11_12_2019/contracts/Factory.sol",
+    "exportedSymbols": {
+      "Factory": [
+        27
+      ]
+    },
+    "id": 28,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "absolutePath": "/C/Users/user/Desktop/BC1_Ruud/Day_08_Wed_11_12_2019/contracts/KickstartCampaign.sol",
+        "file": "./KickstartCampaign.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 28,
+        "sourceUnit": 231,
+        "src": "26:33:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [
+          230
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 27,
+        "linearizedBaseContracts": [
+          27
+        ],
+        "name": "Factory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 5,
+            "name": "deployedCampaigns",
+            "nodeType": "VariableDeclaration",
+            "scope": 27,
+            "src": "82:44:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_contract$_KickstartCampaign_$230_$dyn_storage",
+              "typeString": "contract KickstartCampaign[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 3,
+                "name": "KickstartCampaign",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 230,
+                "src": "82:17:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_KickstartCampaign_$230",
+                  "typeString": "contract KickstartCampaign"
+                }
+              },
+              "id": 4,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "82:19:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_contract$_KickstartCampaign_$230_$dyn_storage_ptr",
+                "typeString": "contract KickstartCampaign[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 25,
+              "nodeType": "Block",
+              "src": "175:127:0",
+              "statements": [
+                {
+                  "assignments": [
+                    11
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 11,
+                      "name": "newCampaign",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 25,
+                      "src": "182:29:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_KickstartCampaign_$230",
+                        "typeString": "contract KickstartCampaign"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 10,
+                        "name": "KickstartCampaign",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 230,
+                        "src": "182:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KickstartCampaign_$230",
+                          "typeString": "contract KickstartCampaign"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 18,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 14,
+                        "name": "minimum",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7,
+                        "src": "236:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 15,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 245,
+                          "src": "245:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 16,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "245:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "id": 13,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "214:21:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_uint256_$_t_address_$returns$_t_contract$_KickstartCampaign_$230_$",
+                        "typeString": "function (uint256,address) returns (contract KickstartCampaign)"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 12,
+                        "name": "KickstartCampaign",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 230,
+                        "src": "218:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KickstartCampaign_$230",
+                          "typeString": "contract KickstartCampaign"
+                        }
+                      }
+                    },
+                    "id": 17,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "214:42:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_KickstartCampaign_$230",
+                      "typeString": "contract KickstartCampaign"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "182:74:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 22,
+                        "name": "newCampaign",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "285:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KickstartCampaign_$230",
+                          "typeString": "contract KickstartCampaign"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_KickstartCampaign_$230",
+                          "typeString": "contract KickstartCampaign"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 19,
+                        "name": "deployedCampaigns",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5,
+                        "src": "262:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_contract$_KickstartCampaign_$230_$dyn_storage",
+                          "typeString": "contract KickstartCampaign[] storage ref"
+                        }
+                      },
+                      "id": 21,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "262:22:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_contract$_KickstartCampaign_$230_$returns$_t_uint256_$",
+                        "typeString": "function (contract KickstartCampaign) returns (uint256)"
+                      }
+                    },
+                    "id": 23,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "262:35:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 24,
+                  "nodeType": "ExpressionStatement",
+                  "src": "262:35:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 26,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createCampaign",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7,
+                  "name": "minimum",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26,
+                  "src": "154:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "154:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "153:14:0"
+            },
+            "returnParameters": {
+              "id": 9,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "175:0:0"
+            },
+            "scope": 27,
+            "src": "130:172:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 28,
+        "src": "61:243:0"
+      }
+    ],
+    "src": "0:306:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/user/Desktop/BC1_Ruud/Day_08_Wed_11_12_2019/contracts/Factory.sol",
+    "exportedSymbols": {
+      "Factory": [
+        27
+      ]
+    },
+    "id": 28,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "absolutePath": "/C/Users/user/Desktop/BC1_Ruud/Day_08_Wed_11_12_2019/contracts/KickstartCampaign.sol",
+        "file": "./KickstartCampaign.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 28,
+        "sourceUnit": 231,
+        "src": "26:33:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [
+          230
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 27,
+        "linearizedBaseContracts": [
+          27
+        ],
+        "name": "Factory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 5,
+            "name": "deployedCampaigns",
+            "nodeType": "VariableDeclaration",
+            "scope": 27,
+            "src": "82:44:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_contract$_KickstartCampaign_$230_$dyn_storage",
+              "typeString": "contract KickstartCampaign[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 3,
+                "name": "KickstartCampaign",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 230,
+                "src": "82:17:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_KickstartCampaign_$230",
+                  "typeString": "contract KickstartCampaign"
+                }
+              },
+              "id": 4,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "82:19:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_contract$_KickstartCampaign_$230_$dyn_storage_ptr",
+                "typeString": "contract KickstartCampaign[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 25,
+              "nodeType": "Block",
+              "src": "175:127:0",
+              "statements": [
+                {
+                  "assignments": [
+                    11
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 11,
+                      "name": "newCampaign",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 25,
+                      "src": "182:29:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_KickstartCampaign_$230",
+                        "typeString": "contract KickstartCampaign"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 10,
+                        "name": "KickstartCampaign",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 230,
+                        "src": "182:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KickstartCampaign_$230",
+                          "typeString": "contract KickstartCampaign"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 18,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 14,
+                        "name": "minimum",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7,
+                        "src": "236:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 15,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 245,
+                          "src": "245:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 16,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "245:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "id": 13,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "214:21:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_uint256_$_t_address_$returns$_t_contract$_KickstartCampaign_$230_$",
+                        "typeString": "function (uint256,address) returns (contract KickstartCampaign)"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 12,
+                        "name": "KickstartCampaign",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 230,
+                        "src": "218:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KickstartCampaign_$230",
+                          "typeString": "contract KickstartCampaign"
+                        }
+                      }
+                    },
+                    "id": 17,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "214:42:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_KickstartCampaign_$230",
+                      "typeString": "contract KickstartCampaign"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "182:74:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 22,
+                        "name": "newCampaign",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "285:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KickstartCampaign_$230",
+                          "typeString": "contract KickstartCampaign"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_KickstartCampaign_$230",
+                          "typeString": "contract KickstartCampaign"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 19,
+                        "name": "deployedCampaigns",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5,
+                        "src": "262:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_contract$_KickstartCampaign_$230_$dyn_storage",
+                          "typeString": "contract KickstartCampaign[] storage ref"
+                        }
+                      },
+                      "id": 21,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "262:22:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_contract$_KickstartCampaign_$230_$returns$_t_uint256_$",
+                        "typeString": "function (contract KickstartCampaign) returns (uint256)"
+                      }
+                    },
+                    "id": 23,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "262:35:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 24,
+                  "nodeType": "ExpressionStatement",
+                  "src": "262:35:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 26,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createCampaign",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7,
+                  "name": "minimum",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26,
+                  "src": "154:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "154:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "153:14:0"
+            },
+            "returnParameters": {
+              "id": 9,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "175:0:0"
+            },
+            "scope": 27,
+            "src": "130:172:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 28,
+        "src": "61:243:0"
+      }
+    ],
+    "src": "0:306:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.21",
+  "updatedAt": "2020-01-20T19:39:53.580Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
