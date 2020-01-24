@@ -1,2 +1,2 @@
 ### Day_01_Mon_18_11_2019 
-Place the assignments in this subdirectory   
+Hierin heb ik een eerste contract gezet op gebasseerd op een oudere compiler omdat hier veel informatie over te vinden is
